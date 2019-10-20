@@ -68,5 +68,10 @@ class MainActivity : AppCompatActivity() {
             pendingOperation = op
             displayOperation.text = pendingOperation
         }
+        buttonEquals.setOnClickListener(opListener)
+        buttonDivide.setOnClickListener(opListener)
+        buttonMultiply.setOnClickListener(opListener)
+        buttonMinus.setOnClickListener(opListener)
+        buttonPlus.setOnClickListener(opListener)
     }
 }

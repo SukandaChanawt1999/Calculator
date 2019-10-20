@@ -103,4 +103,13 @@ class MainActivity : AppCompatActivity() {
         newNumber.setText("")
 
     }
+
+    override fun onSaveInstanceState(outState: Bundle) {
+        super.onSaveInstanceState(outState)
+        if (operand1 != null){
+            outState!!.putDouble(STATE_OPERAND1,operand1!!)
+        }
+        outState.putString(STATE_PENDING_OPERATION, pendingOperation)
+    }
+
 }

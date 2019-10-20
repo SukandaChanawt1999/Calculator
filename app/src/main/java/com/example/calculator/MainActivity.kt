@@ -34,5 +34,11 @@ class MainActivity : AppCompatActivity() {
         val button8: Button = findViewById(R.id.button8)
         val button9: Button = findViewById(R.id.button9)
         val buttonDot: Button = findViewById(R.id.buttonDot)
+
+        val buttonEquals: Button = findViewById(R.id.buttonEquals)
+        val buttonDivide: Button = findViewById(R.id.buttonDivide)
+        val buttonMultiply: Button = findViewById(R.id.buttonMultiply)
+        val buttonMinus: Button = findViewById(R.id.buttonMinus)
+        val buttonPlus: Button = findViewById(R.id.buttonPlus)
     }
 }

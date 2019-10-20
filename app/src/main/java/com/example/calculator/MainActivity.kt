@@ -74,4 +74,7 @@ class MainActivity : AppCompatActivity() {
         buttonMinus.setOnClickListener(opListener)
         buttonPlus.setOnClickListener(opListener)
     }
+    private fun performOperation(value: String, operation: String){
+        displayOperation.text = operation
+    }
 }

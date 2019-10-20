@@ -11,6 +11,10 @@ class MainActivity : AppCompatActivity() {
     private lateinit var newNumber: EditText
     private val displayOption by lazy(LazyThreadSafetyMode.NONE) { findViewById<TextView>(R.id.operation) }
 
+    private var operand1: Double? = null
+    private var operand2: Double = 0.0
+    private var pendingOperaton = "="
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)

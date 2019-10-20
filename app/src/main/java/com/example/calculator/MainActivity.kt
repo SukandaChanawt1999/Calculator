@@ -9,6 +9,7 @@ import android.widget.TextView
 
 private const val STATE_PENDING_OPERATION = "PendingOperation"
 private const val STATE_OPERAND1 = "Operand1"
+private const val STATE_OPERAND1_STORED = "Operand1_Stored"
 
 class MainActivity : AppCompatActivity() {
 
@@ -108,15 +109,21 @@ class MainActivity : AppCompatActivity() {
         super.onSaveInstanceState(outState)
         if (operand1 != null){
             outState.putDouble(STATE_OPERAND1,operand1!!)
+            outState.putBoolean(STATE_OPERAND1_STORED,true)
         }
         outState.putString(STATE_PENDING_OPERATION, pendingOperation)
     }
 
     override fun onRestoreInstanceState(savedInstanceState: Bundle) {
         super.onRestoreInstanceState(savedInstanceState)
+        if (savedInstanceState.getBoolean(STATE_OPERAND1_STORED,false)){
+            operand1 = savedInstanceState.getDouble(STATE_OPERAND1)
+        }else{
+            operand1 = null
+        }
         operand1 = savedInstanceState.getDouble(STATE_OPERAND1)
 
-        pendingOperation = savedInstanceState.getString(STATE_PENDING_OPERATION)
+        pendingOperation = savedInstanceState.getString(STATE_PENDING_OPERATION).toString()
         displayOperation.text = pendingOperation
     }
 

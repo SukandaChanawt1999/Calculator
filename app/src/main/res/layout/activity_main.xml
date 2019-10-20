@@ -124,52 +124,52 @@
         app:layout_constraintStart_toEndOf="@+id/button8" />
 
     <Button
-        android:id="@+id/button10"
+        android:id="@+id/buttonDivide"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Button"
+        android:text="/"
         app:layout_constraintStart_toStartOf="parent"
         tools:layout_editor_absoluteY="338dp" />
 
     <Button
-        android:id="@+id/button11"
+        android:id="@+id/buttonMultiply"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Button"
+        android:text="*"
         tools:layout_editor_absoluteX="158dp"
         tools:layout_editor_absoluteY="345dp" />
 
     <Button
-        android:id="@+id/button13"
+        android:id="@+id/buttonMinus"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
         android:layout_marginLeft="16dp"
-        android:text="Button"
+        android:text="-"
         app:layout_constraintStart_toStartOf="parent"
         tools:layout_editor_absoluteY="419dp" />
 
     <Button
-        android:id="@+id/button14"
+        android:id="@+id/buttonDot"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Button"
+        android:text="."
         tools:layout_editor_absoluteX="195dp"
         tools:layout_editor_absoluteY="450dp" />
 
     <Button
-        android:id="@+id/button15"
+        android:id="@+id/buttonEquals"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Button"
+        android:text="="
         tools:layout_editor_absoluteX="313dp"
         tools:layout_editor_absoluteY="439dp" />
 
     <Button
-        android:id="@+id/button16"
+        android:id="@+id/buttonPlus"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Button"
+        android:text="+"
         tools:layout_editor_absoluteX="99dp"
         tools:layout_editor_absoluteY="304dp" />
 

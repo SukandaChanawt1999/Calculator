@@ -87,7 +87,7 @@ class MainActivity : AppCompatActivity() {
                 "/" -> if (operand2 == 0.0){
                     operand1 = Double.NaN
                 }else{
-                    operand1 = operand2!! / operand2
+                    operand1 = operand1!! / operand2
                 }
                 "*" -> operand1 = operand1!! * operand2
                 "-" -> operand1 = operand1!! - operand2

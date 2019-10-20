@@ -6,7 +6,7 @@ import android.widget.EditText
 
 class MainActivity : AppCompatActivity() {
 
-    private lateinit var result: EditText? = null
+    private lateinit var result: EditText
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)

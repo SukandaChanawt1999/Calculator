@@ -80,6 +80,20 @@ class MainActivity : AppCompatActivity() {
         buttonMultiply.setOnClickListener(opListener)
         buttonMinus.setOnClickListener(opListener)
         buttonPlus.setOnClickListener(opListener)
+        buttonNeg.setOnClickListener({view ->
+            val value = newNumber.text.toString()
+            if (value.isNotEmpty()){
+                newNumber.setText("-")
+            }else{
+                try {
+                    var doubleValue = value.toDouble();
+                    doubleValue *= -1
+                    newNumber.setText(doubleValue.toString())
+                }catch (e: NumberFormatException){
+                    newNumber.setText("")
+                }
+            }
+        })
     }
     private fun performOperation(value: Double, operation: String){
         if (operand1 == null){

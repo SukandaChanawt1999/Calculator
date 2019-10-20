@@ -75,6 +75,22 @@ class MainActivity : AppCompatActivity() {
         buttonPlus.setOnClickListener(opListener)
     }
     private fun performOperation(value: String, operation: String){
+        if (operand1 == null){
+            operand2 = value.toDouble()
+        }else{
+            operand2 = value.toDouble()
+            if (pendingOperation == "="){
+                pendingOperation = operation
+            }
+            when(pendingOperation){
+                "=" -> operand1 = operand2
+                "/" -> if (operand2 == 0.0){
+                    operand1 = Double.NaN
+                }else{
+                    operand1 = operand2!! / operand2
+                }
+            }
+        }
         displayOperation.text = operation
     }
 }

@@ -9,7 +9,7 @@ class MainActivity : AppCompatActivity() {
 
     private lateinit var result: EditText
     private lateinit var newNumber: EditText
-    private val displayOption by lazy { findViewById<TextView>(R.id.operation) }
+    private val displayOption by lazy(LazyThreadSafetyMode.NONE) { findViewById<TextView>(R.id.operation) }
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)

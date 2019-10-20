@@ -14,7 +14,7 @@ class MainActivity : AppCompatActivity() {
     private val displayOperation by lazy(LazyThreadSafetyMode.NONE) { findViewById<TextView>(R.id.operation) }
 
     private var operand1: Double? = null
-    private var operand2: Double = 0.0
+
     private var pendingOperation = "="
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -78,22 +78,22 @@ class MainActivity : AppCompatActivity() {
     }
     private fun performOperation(value: Double, operation: String){
         if (operand1 == null){
-            operand2 = value
+            operand1 = value
         }else{
-            operand2 = value
+
             if (pendingOperation == "="){
                 pendingOperation = operation
             }
             when(pendingOperation){
-                "=" -> operand1 = operand2
-                "/" -> if (operand2 == 0.0){
-                    operand1 = Double.NaN
+                "=" -> operand1 = value
+                "/" -> operand1 = if (value == 0.0){
+                    Double.NaN
                 }else{
-                    operand1 = operand1!! / operand2
+                    operand1!! / value
                 }
-                "*" -> operand1 = operand1!! * operand2
-                "-" -> operand1 = operand1!! - operand2
-                "+" -> operand1 = operand1!! + operand2
+                "*" -> operand1 = operand1!! * value
+                "-" -> operand1 = operand1!! - value
+                "+" -> operand1 = operand1!! + value
             }
         }
         result.setText(operand1.toString())

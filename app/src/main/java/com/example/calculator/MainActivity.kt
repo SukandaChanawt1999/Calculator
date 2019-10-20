@@ -2,6 +2,7 @@ package com.example.calculator
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.view.View
 import android.widget.Button
 import android.widget.EditText
 import android.widget.TextView
@@ -40,5 +41,10 @@ class MainActivity : AppCompatActivity() {
         val buttonMultiply = findViewById<Button>(R.id.buttonMultiply)
         val buttonMinus = findViewById<Button>(R.id.buttonMinus)
         val buttonPlus = findViewById<Button>(R.id.buttonPlus)
+
+        val listener = View.OnClickListener { v ->
+            val b = v as Button
+            newNumber.append(b.text)
+        }
     }
 }

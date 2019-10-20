@@ -89,8 +89,13 @@ class MainActivity : AppCompatActivity() {
                 }else{
                     operand1 = operand2!! / operand2
                 }
+                "*" -> operand1 = operand1!! * operand2
+                "-" -> operand1 = operand1!! - operand2
+                "+" -> operand1 = operand1!! + operand2
             }
         }
-        displayOperation.text = operation
+        result.setText(operand1.toString())
+        newNumber.setText("")
+
     }
 }

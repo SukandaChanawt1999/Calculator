@@ -116,10 +116,10 @@ class MainActivity : AppCompatActivity() {
 
     override fun onRestoreInstanceState(savedInstanceState: Bundle) {
         super.onRestoreInstanceState(savedInstanceState)
-        if (savedInstanceState.getBoolean(STATE_OPERAND1_STORED,false)){
-            operand1 = savedInstanceState.getDouble(STATE_OPERAND1)
+        operand1 = if (savedInstanceState.getBoolean(STATE_OPERAND1_STORED,false)){
+            savedInstanceState.getDouble(STATE_OPERAND1)
         }else{
-            operand1 = null
+            null
         }
         operand1 = savedInstanceState.getDouble(STATE_OPERAND1)
 
